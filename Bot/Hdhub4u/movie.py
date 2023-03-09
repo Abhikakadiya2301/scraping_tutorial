@@ -1,9 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-class movie(webdriver.Chrome):
+class movie_scrap(webdriver.Chrome):
     def __init__(self,teardown = False):
-        super(movie,self).__init__()
+        super(movie_scrap,self).__init__()
         self.teardown = teardown
         self.implicitly_wait(10)
         #self.maximize_window()
@@ -30,7 +30,7 @@ class movie(webdriver.Chrome):
             result=tag.text
             print(result)
 
-with movie() as bot:
+with movie_scrap() as bot:
     #bot.home_page()
     #bot.movies()
-    bot.get_genre()
+    #bot.get_genre()
