@@ -24,7 +24,6 @@ class movie_scrap(webdriver.Chrome):
         genre_list = self.find_elements(By.CLASS_NAME,'page-meta')
         #print(len(genre_list))
 
-        #list_genre = self.find_elements(By.CSS_SELECTOR,'em')
         for tag in genre_list:
             list_genre = self.find_elements(By.CSS_SELECTOR, 'em')
             result=tag.text
