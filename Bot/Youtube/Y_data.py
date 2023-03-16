@@ -22,7 +22,8 @@ videos = driver.find_elements(By.ID,"contents")
 
 for video in videos:
     title = driver.find_element(By.ID,"video-title")
-    #views = driver.find_element(By.CLASS_NAME,"inline-metadata-item").text
-    #print(title)
+    views = driver.find_element(By.CLASS_NAME,"inline-metadata-item")
+    result = title.text, views.text
+    print(result)
 
 driver.quit()
