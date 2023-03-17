@@ -18,12 +18,6 @@ video_tab = driver.find_elements(By.XPATH,'//*[@id="tabsContent"]/tp-yt-paper-ta
 for link in video_tab:
     link.click()
 
-videos = driver.find_elements(By.ID,"contents")
-
+videos = driver.find_elements(By.ID,"video-title")
 for video in videos:
-    title = driver.find_element(By.ID,"video-title")
-    views = driver.find_element(By.CLASS_NAME,"inline-metadata-item")
-    result = title.text, views.text
-    print(result)
-
-driver.quit()
+    print(video)

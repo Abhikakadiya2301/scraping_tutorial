@@ -8,9 +8,6 @@ open_site = driver.get("https://app.buissmaster.com/")
 driver.maximize_window()
 driver.implicitly_wait(20)
 
-'''login_button = driver.find_element(By.XPATH, "//*[@id=\"root\"]/header/a[2]/button")
-login_button.click()'''
-
 login_details = ["jayvaghasiya175@gmail.com","Buiss@123"]
 detail_input = driver.find_elements(By.CSS_SELECTOR,"input")
 
@@ -35,5 +32,11 @@ drop_down = driver.find_element(By.CSS_SELECTOR,"input")
 drop_down.send_keys(Keys.DOWN)
 drop_down.send_keys(Keys.ENTER)
 
+ticekt_button = driver.find_elements(By.XPATH,"//*[@id=\"mui-p-71585-P-PENDI_Not_Rec\"]/div[2]/div[2]/table/tbody/tr[2]/td/div/div/div/div/div[5]/button")
+for i in ticekt_button:
+    if ticekt_button.index(i) < 2:
+        continue
+    else:
+        i.click()
 driver.quit()
 
