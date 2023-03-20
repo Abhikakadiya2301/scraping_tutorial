@@ -38,5 +38,7 @@ for i in ticekt_button:
         continue
     else:
         i.click()
+        generate_ticket = driver.find_element(By.XPATH,"//*[@id=\"generate_ticket_info\"]/div[2]/div/button[4]")
+        generate_ticket.click()
 driver.quit()
 

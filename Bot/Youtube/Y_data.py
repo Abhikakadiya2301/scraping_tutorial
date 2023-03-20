@@ -14,10 +14,20 @@ search_element.send_keys(Keys.ENTER)
 
 enter_channel = driver.find_element(By.ID,'main-link').click()
 
-video_tab = driver.find_elements(By.XPATH,'//*[@id="tabsContent"]/tp-yt-paper-tab[2]')
-for link in video_tab:
-    link.click()
+video_tab = driver.find_element(By.XPATH,"//*[@id=\"tabsContent\"]/tp-yt-paper-tab[2]").click()
 
-videos = driver.find_elements(By.ID,"video-title")
-for video in videos:
-    print(video)
+list = []
+video_title = driver.find_elements(By.CLASS_NAME,"style-scope ytd-rich-grid-renderer")
+for i in video_title:
+    title = i.find_element(By.XPATH,".//*[@id=\"video-title\"]")
+    list.extend(list)
+
+print(list)
+#(video_title)
+'''for i in video_title:
+    text_title = i.text
+    list.extend(text_title)
+print(list)'''
+
+
+
